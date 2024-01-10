@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="../static/css/Product.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 style="color: white">Application to Manage PC setups</h1>
+        <div class="search">
+          <i class="uil uil-search" style="color: white; font-size: 30px"></i>
+          <i class="uil uil-bell" style="color: white; font-size: 30px"></i>
+          <i
+            class="uil uil-shopping-cart-alt"
+            style="color: white; font-size: 30px"
+          ></i>
+          <div class="admin"></div>
+      </div>
+      <div class="functions">
+        
+      </div>
+    </div>
+
+    <div class="row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Types</th>
+            <th>Barcode</th>
+            <th>In Stock</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="ptoduct : ${products}">
+            <td th:utext="${ptoduct.Image}"></td>
+            <td th:utext="${ptoduct.Types}"></td>
+            <td th:utext="${ptoduct.Barcode}"></td>
+            <td th:utext="${ptoduct.Instock}"></td>
+            <td th:utext="${ptoduct.Price}"></td>
+            <td th:utext="${ptoduct.Quantity}"></td>
+            <td th:utext="${ptoduct.Total}"></td>
+            <td>
+              <a
+                class="btn btn-info"
+                th:if="${ptoduct.role} == '1'"
+                th:href="@{/pc_setup/insert_product}"
+                >Insert</a
+              >
+              <a
+                class="btn btn-primary"
+                th:if="${ptoduct.role} == '1'"
+                th:href="@{/pc_setup/update_product}"
+                >Update</a
+              >
+              <a class="btn btn-danger" th:if="${ptoduct.role} == '1'" href=""
+                >Delete</a
+              >
+              <a
+                class="btn btn-warning"
+                th:if="${ptoduct.role} == '1'"
+                href=""
+                >View</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </body>
+</html>

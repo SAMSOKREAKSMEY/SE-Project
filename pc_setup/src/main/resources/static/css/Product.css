@@ -1,0 +1,37 @@
+@import "https://unicons.iconscout.com/release/v4.0.0/css/line.css";
+.container {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 5px;
+  border: 2px;
+  border-color: black;
+  background-color: rgb(236, 48, 48);
+  /* padding: 20px;  */
+}
+.header {
+  width: 100%;
+  height: px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 20px;  */
+  background-color: rgba(32, 62, 97, 1);
+}
+.admin {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: white;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.functions {
+  width: 30%;
+  height: 70%;
+  background-color: brown;
+  display: flex;
+  justify-content: start;
+}
