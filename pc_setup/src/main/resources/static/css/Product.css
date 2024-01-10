@@ -28,10 +28,4 @@
   justify-content: space-between;
   gap: 50px;
 }
-.functions {
-  width: 30%;
-  height: 70%;
-  background-color: brown;
-  display: flex;
-  justify-content: start;
-}
+
